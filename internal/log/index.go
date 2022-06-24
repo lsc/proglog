@@ -27,7 +27,7 @@ func newIndex(f *os.File, c Config) (*index, error) {
 	if err != nil {
 		return nil, err
 	}
-  idx.size = uint64(fi.Size())
+	idx.size = uint64(fi.Size())
 	if err = os.Truncate(
 		f.Name(), int64(c.Segment.MaxIndexBytes),
 	); err != nil {
@@ -86,5 +86,5 @@ func (i *index) Write(off uint32, pos uint64) error {
 }
 
 func (i *index) Name() string {
-  return i.file.Name()
+	return i.file.Name()
 }

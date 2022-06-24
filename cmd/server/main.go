@@ -1,12 +1,12 @@
 package main
 
 import (
-  "log"
+	"log"
 
-  "github.com/lsc/proglog/internal/server"
+	"github.com/lsc/proglog/internal/server"
 )
 
-func main()  {
-  srv := server.NewHTTPServer(":8080")
-  log.Fatal(srv.ListenAndServe())
+func main() {
+	srv := server.NewHTTPServer(":8080")
+	log.Fatal(srv.ListenAndServe())
 }
