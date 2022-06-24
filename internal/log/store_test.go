@@ -75,7 +75,6 @@ func TestStoreClose(t *testing.T)  {
   require.NoError(t, err)
   defer os.Remove(f.Name())
   s, err := newStore(f)
-
   require.NoError(t, err)
   _, _, err = s.Append(write)
   require.NoError(t, err)

@@ -81,7 +81,7 @@ func (s *store) ReadAt(p []byte, off int64) (int, error) {
   return s.File.ReadAt(p, off)
 }
 
-func (s *store) CLose() error {
+func (s *store) Close() error {
   s.mu.Lock()
   defer s.mu.Unlock()
   err := s.buf.Flush()
